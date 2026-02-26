@@ -114,8 +114,8 @@ def send_thread_task(all_data):
         with serial.Serial(port_sender, 9600) as ser:
             for i, data in enumerate(all_data):
                 send_data(ser, data)
-                print(f"[SENDER]   [{i+1}] Packet Sent")
-                time.sleep(0.15) 
+                print(f"[SENDER]   packer {i+1}/100 Sent")
+                time.sleep(0.3) 
     except Exception as e:
         print(f"Sender Thread Error: {e}")
 
